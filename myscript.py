@@ -14,12 +14,13 @@ os.chdir(path)
 
 f = open("%s-%s.md" % (d, title), "w+")
 
-print("------", file=f)
-print("Title:%s\r" % title, file=f)
+print("---", file=f)
+print("layout: post")
+print("Title: %s\r" % title, file=f)
 
 if cat: print("Categories: %s\r" % cat, file=f)
 if tags: print("Tags: %s\r" % tags, file=f)
-print("------", file=f)
+print("---", file=f)
 f.close()
 
 list_of_files = glob.glob('/users/FlattDev/Documents/Blog/bflatt72.github.io/_posts/*.md')
