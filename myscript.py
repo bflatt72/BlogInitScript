@@ -15,7 +15,7 @@ os.chdir(path)
 f = open("%s-%s.md" % (d, title), "w+")
 
 print("---", file=f)
-print("layout: post")
+print("layout: post", file=f)
 print("Title: %s\r" % title, file=f)
 
 if cat: print("Categories: %s\r" % cat, file=f)
