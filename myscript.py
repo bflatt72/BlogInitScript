@@ -8,7 +8,7 @@ cat = input("Category:  ")
 tags = input("Tags:  ")
 d = time.strftime('%Y-%m-%d')
 
-path = "/Users/FlattDev/Documents/Blog/bflatt72.github.io/_posts"
+path = "/home/flattdev/Documents/blog/bflatt72.github.io/_posts"
 
 os.chdir(path)
 
@@ -23,7 +23,7 @@ if tags: print("Tags: %s\r" % tags, file=f)
 print("---", file=f)
 f.close()
 
-list_of_files = glob.glob('/users/FlattDev/Documents/Blog/bflatt72.github.io/_posts/*.md')
+list_of_files = glob.glob('/home/flattdev/Documents/blog/bflatt72.github.io/_posts/*.md')
 latest_file = max(list_of_files, key=os.path.getctime)
 
 subprocess.call(['code', latest_file])
